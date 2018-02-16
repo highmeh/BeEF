@@ -1,9 +1,9 @@
 {
-	"name": "Social Engineering - Fake IT Department Updates (IE 9+ on Windows 7)",
+	"name": "Social Engineering - Fake IT Department Updates (IE on Windows)",
 	"comment": "Create an iFrame and display a convincing IT Department page. Prompt to install updates (your payload).",
 	"author": "https://github.com/highmeh",
 	"browser": "IE",
-	"browser_version": "=>9",
+	"browser_version": "ALL",
 	"os": "Windows",
 	"os_version": "==7",
 	"modules": [
@@ -16,7 +16,7 @@
 				"iframe_src": "http://yourserverip/fake_it_updates.html",
 				"iframe_timeout": "3500"
 						}
-		}
+		},
 
 		{
 			"name": "fake_notification_ie",
