@@ -1,0 +1,21 @@
+{
+	"name": "Redirect IE on Windows",
+	"comment": "Simple redirect. If the browser is any version of IE on any version of Windows, direct it elsewhere",
+	"author": "https://github.com/highmeh",
+	"browser": "IE",
+	"browser_version": "ALL",
+	"os": "Windows",
+	"os_version": "ALL",
+	"modules": [
+		{ 
+			"name": 
+			"site_redirect", 
+			"condition": null,
+			"options": { 
+				"redirect_url": "https://www.ubuntu.com"
+						}
+		}],
+	"execution_order": [0],
+	"execution_delay": [0],
+	"chain_mode": "sequential"
+}

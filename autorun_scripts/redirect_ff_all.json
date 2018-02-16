@@ -1,0 +1,21 @@
+{
+	"name": "Redirect Firefox Browser",
+	"comment": "Simple redirect. If the browser is Firefox on any OS, redirect it.",
+	"author": "https://github.com/highmeh",
+	"browser": "FF",
+	"browser_version": "ALL",
+	"os": "ALL",
+	"os_version": "ALL",
+	"modules": [
+		{ 
+			"name": 
+			"site_redirect", 
+			"condition": null,
+			"options": { 
+				"redirect_url": "https://www.google.com/chrome"
+						}
+		}],
+	"execution_order": [0],
+	"execution_delay": [0],
+	"chain_mode": "sequential"
+}
