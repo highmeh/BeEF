@@ -8,8 +8,7 @@
 	"os_version": "ALL",
 	"modules": [
 		{ 
-			"name": 
-			"site_redirect", 
+			"name": "site_redirect", 
 			"condition": null,
 			"options": { 
 				"redirect_url": "https://www.google.com/chrome"
