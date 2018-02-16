@@ -1,4 +1,4 @@
-#README:
+## README:
 This directory contains autorun scripts for the [Browser Exploitation Framework](https://github.com/beefproject/beef).  
   
   
@@ -8,7 +8,7 @@ The .json files should be placed in your BeEF directory, under /beef/arerules/en
 Should you notice any issues, or come up with rules of your own, feel free to submit a pull request.  
 
 
-#QUICKREFERENCE:  
+## QUICKREFERENCE:  
 * Valid Values for Browser Field:  
   * "FF" = Firefox  
   * "IE" = Internet Explorer  
