@@ -1,0 +1,107 @@
+#
+# Copyright (c) 2006-2018 Wade Alcorn - wade@bindshell.net
+# Browser Exploitation Framework (BeEF) - http://beefproject.com
+# See the file 'doc/COPYING' for copying permission
+#
+# BeEF Configuration file
+
+beef:
+    version: '0.4.7.0-alpha' 
+    debug: false
+    client_debug: false
+    crypto_default_value_length: 80
+
+    credentials:
+        user:   "b33f"  #changeme
+        passwd: "y0ur_s3cr3t_p4ssw0rd!"  #changeme
+
+    restrictions:
+        permitted_hooking_subnet: "client_ip_range/24"  #changeme
+        permitted_ui_subnet: "your_ip_address/32"  #changeme
+
+    http:
+        debug: false
+        host: "beef_server_public_ip"  #changeme
+        port: "443"  #changeme
+
+        xhr_poll_timeout: 1000
+
+        public: "hostrunningbeef.yourdomain.com"   #changeme
+
+        web_ui_basepath: "/extremelydifficulttoguessUI"  #changeme
+
+        hook_file: "/jquery.min.js" 
+        hook_session_name: "PHPSESSID" 
+        session_cookie_name: "PHPSESSION_ID" 
+
+        restful_api:
+            allow_cors: false
+            cors_allowed_domains: "http://browserhacker.com"
+
+        websocket:
+            enable: false
+            port: 61985 
+            secure: true
+            secure_port: 61986 
+            ws_poll_timeout: 1000 
+            ws_connect_timeout: 500
+
+        web_server_imitation:
+            enable: true
+            type: "apache"
+            hook_404: false  
+            hook_root: false
+
+        https:
+            enable: true
+            key: "/etc/letsencrypt/archive/host.yourdomain.com/privkey1.pem"  #changeme
+            cert: "/etc/letsencrypt/archive/host.yourdomain.com/cert1.pem"  #changeme
+
+    database:
+        driver: "sqlite"
+
+        db_file: "beef.db"
+
+        db_host: "localhost"
+        db_port: 3306
+        db_name: "beef"
+        db_user: "beef"
+        db_passwd: "beef"
+        db_encoding: "UTF-8"
+
+    autorun:
+        result_poll_interval: 300
+        result_poll_timeout: 5000
+        continue_after_timeout: true
+
+    dns_hostname_lookup: false
+
+    geoip:
+        enable: true
+        database: '/opt/GeoIP/GeoLiteCity.dat'
+
+    integration:
+        phishing_frenzy:
+            enable: false
+
+    extension:
+        admin_ui:
+            enable: true
+        demos:
+            enable: true
+        events:
+            enable: true
+        evasion:
+            enable: true
+        requester:
+            enable: true
+        proxy:
+            enable: true
+        network:
+            enable: true
+        metasploit:
+            enable: false
+        social_engineering:
+            enable: true
+        xssrays:
+            enable: true
